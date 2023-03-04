@@ -13,13 +13,6 @@ body {
   background-color: rgb(192, 0, 0);
 }
 
-
-
-h1{
-  margin-top: 10px;
-  text-align: center;
-}
-
 .header{
  display: flex;
  flex-direction: row;
@@ -27,6 +20,7 @@ h1{
  align-items: center;
  gap: 85px;
  margin-top: 15px;
+ background-color: grey;
 }
 
 input{
