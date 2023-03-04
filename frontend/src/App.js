@@ -33,8 +33,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Task App</h1>
-
         <div className="header">
           <input
             type="text"
