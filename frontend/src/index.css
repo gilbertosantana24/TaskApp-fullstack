@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(192, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 .header{
@@ -19,14 +19,17 @@ body {
  justify-content: center;
  align-items: center;
  gap: 85px;
- margin-top: 15px;
  background-color: grey;
+ max-height: 300px;
+ padding-bottom: 15px;
+ padding-top: 10px;
 }
 
 input{
   width: 200px;
   padding: 10px;
   font-size: 20px;
+  border-radius: 8px;
 }
 
 .Priority-select-title{
@@ -42,6 +45,7 @@ input{
   margin-top: 5px;
   width: 90px;
   height: 30px;
+  border-radius: 8px;
 }
 
 .status-selector-options{
@@ -49,6 +53,7 @@ input{
   margin-top: 5px;
   width: 90px;
   height: 30px;
+  border-radius: 8px;
 }
 
 .addTask{
@@ -57,6 +62,7 @@ input{
   padding: 7px 15px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 8px;
 }
 
 .task-container{
@@ -72,6 +78,7 @@ input{
   padding: 15px 10px;
   font-size: 20px;
   max-width: 450px;
+  border-radius: 8px;
 }
 
 .icons{
