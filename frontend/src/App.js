@@ -104,18 +104,76 @@ function App() {
         </div>
 
         <div className="task-container">
-          {task.map((item) => (
-            <Task
-              key={item._id}
-              text={item.text}
-              status={item.status}
-              priority={item.priority}
-              handleUpdate={() =>
-                handleUpdate(item._id, item.text, item.priority, item.status)
-              }
-              deleteTask={() => deleteTask(item._id, setTask)}
-            />
-          ))}
+          <div className="sort-container">
+            <div className="to-do-tasks">
+              <h1>To Do</h1>
+              {task
+                .filter((item) => item.status == "To do")
+                .map((item) => (
+                  <Task
+                    key={item._id}
+                    text={item.text}
+                    status={item.status}
+                    priority={item.priority}
+                    handleUpdate={() =>
+                      handleUpdate(
+                        item._id,
+                        item.text,
+                        item.priority,
+                        item.status
+                      )
+                    }
+                    deleteTask={() => deleteTask(item._id, setTask)}
+                  />
+                ))}
+            </div>
+
+            <div className="in-progress-tasks">
+              <h1>In progress</h1>
+              {task
+                .filter((item) => item.status == "In progress")
+                .map((item) => (
+                  <Task
+                    key={item._id}
+                    text={item.text}
+                    status={item.status}
+                    priority={item.priority}
+                    handleUpdate={() =>
+                      handleUpdate(
+                        item._id,
+                        item.text,
+                        item.priority,
+                        item.status
+                      )
+                    }
+                    deleteTask={() => deleteTask(item._id, setTask)}
+                  />
+                ))}
+            </div>
+
+            <div className="done-tasks">
+              <h1>Done</h1>
+              {task
+                .filter((item) => item.status == "Done")
+                .map((item) => (
+                  <Task
+                    key={item._id}
+                    text={item.text}
+                    status={item.status}
+                    priority={item.priority}
+                    handleUpdate={() =>
+                      handleUpdate(
+                        item._id,
+                        item.text,
+                        item.priority,
+                        item.status
+                      )
+                    }
+                    deleteTask={() => deleteTask(item._id, setTask)}
+                  />
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
