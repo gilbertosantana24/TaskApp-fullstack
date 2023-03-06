@@ -108,7 +108,7 @@ function App() {
             <div className="to-do-tasks">
               <h1>To Do</h1>
               {task
-                .filter((item) => item.status == "To do")
+                .filter((item) => item.status === "To do")
                 .map((item) => (
                   <Task
                     key={item._id}
@@ -131,7 +131,7 @@ function App() {
             <div className="in-progress-tasks">
               <h1>In progress</h1>
               {task
-                .filter((item) => item.status == "In progress")
+                .filter((item) => item.status === "In progress")
                 .map((item) => (
                   <Task
                     key={item._id}
@@ -154,7 +154,7 @@ function App() {
             <div className="done-tasks">
               <h1>Done</h1>
               {task
-                .filter((item) => item.status == "Done")
+                .filter((item) => item.status === "Done")
                 .map((item) => (
                   <Task
                     key={item._id}
